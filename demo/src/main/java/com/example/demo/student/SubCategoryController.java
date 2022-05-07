@@ -5,9 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RestController
 public class SubCategoryController {
 
     private final SubCategoryService subCategoryService;
@@ -19,8 +21,8 @@ public class SubCategoryController {
 
 
 
-    @GetMapping("/categories")
-    public List<SubCategory> getSubCategories(Model model) {
+    @GetMapping("/subcategories")
+    public List<SubCategory> getSubCategories() {
         return subCategoryService.getSubCategories();
     }
 

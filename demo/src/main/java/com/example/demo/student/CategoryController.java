@@ -18,12 +18,12 @@ public class CategoryController {
 
 
     @GetMapping("/categories")
-    public List<Category> getCategories(Model model) {
+    public List<Category> getCategories() {
         return categoryService.getCategories();
     }
 
 
-    @PostMapping("/addCategory")
+    @PostMapping("/addSubCategory")
     public void addCategory(@RequestBody Category category) {
         categoryService.addCategory(category);
     }

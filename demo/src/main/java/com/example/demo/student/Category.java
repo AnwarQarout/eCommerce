@@ -5,7 +5,6 @@ import java.time.Period;
 
 @Entity //for hibernate
 @Table //for table in our database
-
 public class Category {
     @Id
 //    @SequenceGenerator(
